@@ -23,6 +23,7 @@ message MessageInfo {
 message CreateMessageRequest {
     string content = 1;//文本内容
     repeated string uris = 2;//图片uri列表
+    int32 message_type = 3;//消息类型 1:普通帖子 2:匿名帖子
 }
 
 message CreateMessageResponse {
