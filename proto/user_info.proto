@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+// POST /upload/user_info
+message UserInfoRequest {
+    string open_id = 1;//唯一id；由session确定
+    string cur_school_name = 2;//学校名；可选
+    string phone_num = 3;//手机号；可选
+    string wx_num = 4;//微信号；可选
+    string name = 5;//昵称；可选
+    int32 sex = 6;//性别；可选
+    string wx_name = 7;//微信名；可选
+    double latitude = 8;//纬度；可选
+    double longitude = 9;//经度；可选
+    string profile_photo = 10;//头像；可选
+}
+
+message UserInfoResponse {
+    int32 status_code = 1;
+    string message = 2;
+}
