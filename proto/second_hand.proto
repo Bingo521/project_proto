@@ -6,6 +6,7 @@ message CreateSecondHandRequest {
     string content = 1;//文本内容
     repeated string uris = 2;//图片uri列表
     float money = 3;//二手金额
+    int32 type = 4;//标签类型
 }
 
 message CreateSecondHandResponse {
