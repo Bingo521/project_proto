@@ -14,7 +14,7 @@ message SetSchoolsRequest {
     string school_name = 1;
     string stu_id = 2;//学号
     string stu_password = 3;//教务在线密码
-    string verify_code = 4;//验证码
+    string code = 4;//验证码
 }
 
 message SetSchoolsResponse {
