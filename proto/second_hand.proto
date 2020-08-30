@@ -37,7 +37,7 @@ message CreateSecondHandResponse {
 }
 
 
-//获取自己的帖子
+//获取用户的二手帖子
 
 // GET /get/user/second_hand
 message GetUserSecondHandRequest {
@@ -55,7 +55,7 @@ message GetUserSecondHandResonse {
      int32 next_index = 6;//下次加载的索引
 }
 
-//获取全部帖子
+//获取全部二手帖子
 //GET /get/second_hand/time_line
 message GetMessageRequest {
     int32 index = 1;//从哪获取
@@ -71,7 +71,7 @@ message GetMessageResponse {
      bool has_more = 5;//是否还有
 }
 
-//获取热门帖子
+//获取热门二手帖子
 //GET /get/second_hand/hot
 message GetHotMessageRequest {
     int32 index = 1;//从哪获取
