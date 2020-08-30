@@ -12,7 +12,7 @@ message SecondHandInfo {
      string content = 2; // 文本信息
      repeated string urls = 3;//图片信息
      int64 create_time = 4;//创建时间
-     float money = 5;//多少钱
+     float price = 5;//价格
      SecondHandUserInfo user_info = 6;//用户信息（匿名帖子中user_info信息为假数据，但可正常使用）
      int32 digg_count = 7;//点赞数
      int32 comment_count = 8;//评论数
@@ -25,14 +25,14 @@ message SecondHandInfo {
 message CreateSecondHandRequest {
     string content = 1;//文本内容
     repeated string uris = 2;//图片uri列表
-    float money = 3;//多少钱
+    float price = 3;//价格
     string category = 4;//分类标签
 }
 
 message CreateSecondHandResponse {
      int32 status_code = 1; //状态码，0是成功，其它是错误码
      string message = 2; // 错误信息，0时为success
-     float money = 3; //多少钱
+     float price = 3; //多少钱
      string category = 4;//分类标签
 }
 
