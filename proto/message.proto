@@ -39,8 +39,8 @@ message CreateMessageResponse {
 // GET /get/user_message
 message GetUserMessageRequest {
     string open_id = 1;//哪个用户的
-    int64 index = 2;//从第几个开始
-    int64 count = 3;//获取多少个
+    int32 index = 2;//从第几个开始
+    int32 count = 3;//获取多少个
 }
 
 message GetUserMessageResonse {
@@ -49,6 +49,7 @@ message GetUserMessageResonse {
      repeated MessageInfo message_infos = 3;
      int64 count = 4;//获取了多少个
      bool has_more = 5;//是否还有
+     int32 next_index = 6;//下次加载的索引
 }
 
 //获取全部帖子
