@@ -52,7 +52,7 @@ message GetUserMessageResonse {
 }
 
 //获取全部帖子
-//GET /get/message
+//GET /get/message/time_line
 message GetMessageRequest {
     int32 index = 1;//从哪获取
     int32 count = 2;//获取多少个
@@ -68,7 +68,7 @@ message GetMessageResponse {
 }
 
 //获取热门帖子
-//GET /get/hot_message
+//GET /get/message/hot
 message GetHotMessageRequest {
     int32 index = 1;//从哪获取
     int32 count = 2;//获取多少个
