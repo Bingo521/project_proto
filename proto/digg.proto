@@ -2,7 +2,7 @@ syntax = "proto3";
 
 enum DiggType {
     ZERO = 0;//无意义
-    DIGG = 1；点赞
+    DIGG = 1;//点赞
     CANCAL_DIGG = 2;//取消点赞
 }
 
