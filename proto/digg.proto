@@ -6,6 +6,13 @@ enum DiggType {
     CANCAL_DIGG = 2;//取消点赞
 }
 
+enum ContentType {
+    ContentType_XX = 0;//无意义
+    MESSAGE = 1;//帖子
+    SECOND_HAND = 2;//二手市场
+    COMMENT = 3;//评论
+}
+
 //点赞
 //POST /digg
 message DiggRequest {

@@ -66,6 +66,7 @@ message GetMessageResponse {
      repeated MessageInfo message_infos = 3;//帖子列表
      int32 next_index = 4;//下次的索引
      bool has_more = 5;//是否还有
+     int64 first_time = 6;//第一刷时间
 }
 
 //获取热门帖子

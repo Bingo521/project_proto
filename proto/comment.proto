@@ -4,7 +4,7 @@ message MessageUserInfo {
     string open_id = 1;//用户uid
     string profile_photo = 2;//头像
     int32 sex = 3;//性别 0:未知 1:男 2:女
-    string user_name = 4;用户名
+    string user_name = 4;//用户名
 }
 
 message CommentMainInfo {
@@ -19,11 +19,12 @@ message CommentInfo {
     int32 digg_count = 3;//点赞数
     int32 reply_count = 4;//回复数
     int64 create_time = 5;//创建时间
-    MessageUserInfo user_info = 6;//发布评论用户信息
+    MessageUserInfo comment_user_info = 6;//发布评论用户信息
+    MessageUserInfo commented_user_info = 7;//被评论的用户信息
 }
 
 //发布评论
-//POST /create/message
+//POST /create/comment
 message CreateCommentRequest {
     CommentMainInfo comment_info = 1;//评论信息
 }
@@ -40,6 +41,7 @@ message GetCommentRequest {
     int64 message_id = 1;//消息id
     int32 index = 2;//起点
     int32 count = 3;//数量，最大50
+    int64 first_time = 4;//第一刷时间
 }
 
 message GetCommentResponse {
@@ -48,4 +50,5 @@ message GetCommentResponse {
      repeated CommentInfo comment_infos= 3;//消息信息列表
      int32 next_index = 4;//下次加载的index
      bool has_more = 5;//是否还有评论
+     int64 first_time = 6;//第一刷时间
 }
