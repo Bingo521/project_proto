@@ -32,8 +32,7 @@ message CreateSecondHandRequest {
 message CreateSecondHandResponse {
      int32 status_code = 1; //状态码，0是成功，其它是错误码
      string message = 2; // 错误信息，0时为success
-     float price = 3; //多少钱
-     string category = 4;//分类标签
+     SecondHandInfo message_info = 3;
 }
 
 
