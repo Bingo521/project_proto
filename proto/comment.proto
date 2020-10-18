@@ -52,3 +52,14 @@ message GetCommentResponse {
      bool has_more = 5;//是否还有评论
      int64 first_time = 6;//第一刷时间
 }
+
+//删除评论/回复
+//POST /delete/comment
+message DeleteCommentRequest {
+  int64 comment_id = 1;
+}
+
+message DeleteCommentResponse {
+  int32 status_code = 1; //状态码，0是成功，其它是错误码
+  string message = 2; // 错误信息，0时为success
+}

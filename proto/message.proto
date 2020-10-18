@@ -84,3 +84,14 @@ message GetHotMessageResponse {
      int32 next_index = 4;//下次的索引
      bool has_more = 5;//是否还有
 }
+
+//删除帖子
+//POST /delete/message
+message DeleteMessageRequest {
+  int64 message_id = 1;
+}
+
+message DeleteMessageResponse {
+  int32 status_code = 1; //状态码，0是成功，其它是错误码
+  string message = 2; // 错误信息，0时为success
+}
