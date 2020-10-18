@@ -61,6 +61,7 @@ message GetMessageRequest {
     int32 index = 1;//从哪获取
     int32 count = 2;//获取多少个
     int64 first_time = 3;//第一刷时间
+    string category = 4;//获取分类，默认为全部（category为空字符串或不传）
 }
 
 message GetMessageResponse {
@@ -78,6 +79,7 @@ message GetHotMessageRequest {
     int32 index = 1;//从哪获取
     int32 count = 2;//获取多少个
     int64 first_time = 3;//第一刷时间
+    string category = 4;//获取分类，默认为全部（category为空字符串或不传）
 }
 
 message GetHotMessageResponse {
